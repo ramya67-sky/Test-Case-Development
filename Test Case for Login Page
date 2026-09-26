@@ -17,13 +17,9 @@ status:- pass
 severity:--
 priority:--
 test comments:Functionality works as expected.
-security test:1. user's password should be masked
-2.forgot pass should redirect to recovery page
-3. check for queries like 1='1'
-performance test:1. after clicking login it want to acces homepage within 0.3 sec
-usability test:1.the remember me should be redirect to link 
-2. the login button should be in visible
-3.error msg should to be in red color
+TC-16: Verify login response time
+TC-17: Verify Login button visibility
+TC-18: Verify SQL-injection-related input handling
 
 
 
@@ -75,9 +71,7 @@ actual result: error msg
 status:- pass
 severity:-
 priority:-
-test comments: The defect can be reproduced consistently using the documented steps. 
-
-
+test comments: Functionality works as expected.
 
 test case id: TC-lp-05
 test description:verify the login page with  empty username + valid password 
@@ -199,9 +193,9 @@ test steps:1. open login page
 6.Close and reopen the browser.
 7.Open the application.
 test data:username:fb123@gmail.com
-pass:(forgot password)
+pass:test@123
 expected result:user should be maintained according to remember me requirement 
-actual result:user credentials are filled  
+actual result:Previously entered username is retained in the login field. 
 status:- pass
 severity:-
 priority:-
@@ -220,9 +214,7 @@ fb123@
 @gmail.com)
 3.Enter valid password..
 5.Click Login.
-6.Close and reopen the browser.
-7.Open the application.
-test data:username:fb123@gmail.com
+test data:username:@gmail.com
 pass:xxxxxxxxx
 expected result:system should display an appropriate validation message and should not proceed with login when the email format is invalid 
 actual result: Email format is correct/appropriate message should be displayed for wrong email format 
@@ -245,7 +237,7 @@ test steps:1. open login page
 test data:username:fb123@gmail.com
 pass:Test@123
 expected result:system should accept the password if all other login requirements are valid.
-actual result:password is correct/appropriate message should be displayed for wrong password format 
+actual result:Password with 8 characters was accepted.(password is correct/appropriate message should be displayed for wrong password format)
 
 status:- pass
 severity:-
