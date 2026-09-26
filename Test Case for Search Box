@@ -1,0 +1,252 @@
+**Project Title:** E-commerce Search Box
+**Tester Name:** Dora
+
+### TC-SB-01 — Valid Product Search
+
+**Test Description:** Verify search with a valid product name.
+
+**Precondition:** Homepage is accessible and the search box is visible.
+
+**Test Steps:**
+
+1. Open the homepage.
+2. Enter `Wireless Headphones` in the search box.
+3. Click the Search icon.
+
+**Test Data:** `Wireless Headphones`
+
+**Expected Result:** Relevant products matching `Wireless Headphones` should be displayed.
+
+**Actual Result:** Relevant wireless headphone products are displayed.
+
+**Status:** PASS
+**Severity:** N/A
+**Priority:** N/A
+**Test Comments:** Functionality works as expected.
+
+---
+
+### TC-SB-02 — No Matching Product
+
+**Test Description:** Verify that an appropriate message is displayed when no matching product exists.
+
+**Precondition:** Homepage is accessible and the search box is visible.
+
+**Test Steps:**
+
+1. Open the homepage.
+2. Enter a product name that does not exist.
+3. Click the Search icon.
+
+**Test Data:** `XYZABC123Nonexistent`
+
+**Expected Result:** `No products found` message should be displayed.
+
+**Actual Result:** `No products found` message is displayed.
+
+**Status:** PASS
+**Severity:** N/A
+**Priority:** N/A
+**Test Comments:** Functionality works as expected.
+
+---
+
+### TC-SB-03 — Empty Search
+
+**Test Description:** Verify search behavior when the search field is left empty.
+
+**Precondition:** Homepage is accessible and the search box is visible.
+
+**Test Steps:**
+
+1. Open the homepage.
+2. Leave the search box empty.
+3. Click the Search icon.
+
+**Test Data:** Empty
+
+**Expected Result:** System should handle the empty search according to the requirement and should not perform an invalid product search.
+
+**Actual Result:** System handles the empty search as expected.
+
+**Status:** PASS
+**Severity:** N/A
+**Priority:** N/A
+**Test Comments:** Functionality works as expected.
+
+---
+
+### TC-SB-04 — Search Using Only Spaces
+
+**Test Description:** Verify that the search field does not accept only spaces as a valid search.
+
+**Precondition:** Homepage is accessible and the search box is visible.
+
+**Test Steps:**
+
+1. Open the homepage.
+2. Enter only spaces in the search box.
+3. Click the Search icon.
+
+**Test Data:** `     `
+
+**Expected Result:** System should reject the spaces-only input and should not perform an invalid search.
+
+**Actual Result:** Spaces-only input is rejected and an appropriate message is displayed.
+
+**Status:** PASS
+**Severity:** N/A
+**Priority:** N/A
+**Test Comments:** Functionality works as expected.
+
+---
+
+### TC-SB-05 — Case-Insensitive Search
+
+**Test Description:** Verify that product search is case-insensitive.
+
+**Precondition:** Homepage is accessible and the search box is visible.
+
+**Test Steps:**
+
+1. Open the homepage.
+2. Enter the product name using uppercase letters.
+3. Click Search.
+4. Repeat the search using lowercase letters.
+5. Compare the results.
+
+**Test Data:** `SPEAKER` / `speaker`
+
+**Expected Result:** The same relevant products should be displayed for both uppercase and lowercase searches.
+
+**Actual Result:** The same relevant products are displayed.
+
+**Status:** PASS
+**Severity:** N/A
+**Priority:** N/A
+**Test Comments:** Functionality works as expected.
+
+---
+
+### TC-SB-06 — Multiple-Word Search
+
+**Test Description:** Verify that the user can search using multiple words.
+
+**Precondition:** Homepage is accessible and the search box is visible.
+
+**Test Steps:**
+
+1. Open the homepage.
+2. Enter a multiple-word product name.
+3. Click Search.
+
+**Test Data:** `Wireless Headphones`
+
+**Expected Result:** Relevant products matching the multiple-word search should be displayed.
+
+**Actual Result:** Relevant products are displayed.
+
+**Status:** PASS
+**Severity:** N/A
+**Priority:** N/A
+**Test Comments:** Functionality works as expected.
+
+---
+
+### TC-SB-07 — Search Using Search Icon
+
+**Test Description:** Verify that clicking the Search icon performs the search.
+
+**Precondition:** Homepage is accessible and the search box is visible.
+
+**Test Steps:**
+
+1. Open the homepage.
+2. Enter a valid product name.
+3. Click the Search icon.
+
+**Test Data:** `Wireless Headphones`
+
+**Expected Result:** Search should be performed and relevant products should be displayed.
+
+**Actual Result:** Search is performed and relevant products are displayed.
+
+**Status:** PASS
+**Severity:** N/A
+**Priority:** N/A
+**Test Comments:** Functionality works as expected.
+
+---
+
+### TC-SB-08 — Search Using Enter Key
+
+**Test Description:** Verify that pressing Enter performs the search.
+
+**Precondition:** Homepage is accessible and the search box is visible.
+
+**Test Steps:**
+
+1. Open the homepage.
+2. Enter a valid product name.
+3. Press the Enter key.
+
+**Test Data:** `Wireless Headphones`
+
+**Expected Result:** Search should be performed and relevant products should be displayed.
+
+**Actual Result:** Search is performed and relevant products are displayed.
+
+**Status:** PASS
+**Severity:** N/A
+**Priority:** N/A
+**Test Comments:** Functionality works as expected.
+
+---
+
+### TC-SB-09 — Clear Search
+
+**Test Description:** Verify the behavior of the search results when the search input is cleared.
+
+**Precondition:** A product search has already been performed.
+
+**Test Steps:**
+
+1. Search for `Wireless Headphones`.
+2. Verify that search results are displayed.
+3. Clear the search text.
+
+**Test Data:** `Wireless Headphones`
+
+**Expected Result:** Search results should be cleared and the application should return to the behavior defined for an empty search field, such as displaying the default product list.
+
+**Actual Result:** Search results are cleared and the application behaves as expected.
+
+**Status:** PASS
+**Severity:** N/A
+**Priority:** N/A
+**Test Comments:** Functionality works as expected.
+
+---
+
+### TC-SB-10 — Very Long Search Input
+
+**Test Description:** Verify that the search field handles a very long input appropriately.
+
+**Precondition:** Homepage is accessible and the search box is visible.
+
+**Test Steps:**
+
+1. Open the homepage.
+2. Enter a very long string in the search box.
+3. Click Search.
+
+**Test Data:** A string exceeding the application's defined maximum input length.
+
+**Expected Result:** System should handle the input according to the defined requirement without crashing, freezing, or producing unexpected behavior.
+
+**Actual Result:** System handles the long input without unexpected behavior.
+
+**Status:** PASS
+**Severity:** N/A
+**Priority:** N/A
+**Test Comments:** Functionality works as expected.
