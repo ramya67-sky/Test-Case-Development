@@ -1,0 +1,295 @@
+ 
+project title:FB
+tester name: Dora
+test case id: TC-lp-01
+test description:verify the login page with valid cretentials 
+preconditions:1.user want to registered and active account
+2. login should be accesable
+test steps:1. enter valid username
+2. enter valid pass
+3. click login
+test data:username:fb123@gmail.com
+pass:xxxxxxx
+expected result:user shoul redirect to home page where login success
+actual result:user is successfully redirected to the homepage 
+status:- pass
+
+severity:--
+priority:--
+test comments:Functionality works as expected.
+security test:1. user's password should be masked
+2.forgot pass should redirect to recovery page
+3. check for queries like 1='1'
+performance test:1. after clicking login it want to acces homepage within 0.3 sec
+usability test:1.the remember me should be redirect to link 
+2. the login button should be in visible
+3.error msg should to be in red color
+
+
+
+test case id: TC-lp-02
+test description:verify the login page with invalid username + valid password 
+preconditions:1.user want to registered and active account
+2. login should be accesable
+test steps:1. enter invalid username
+2. enter valid pass
+3. click login
+test data:username:123@gmail.com
+pass:xxxxxxx
+expected result:user should not redirect to home page where it want to show the error msg as invalid credentials
+actual result: error msg
+status:- pass
+severity:-
+priority:-
+test comments: Functionality works as expected.
+
+test case id: TC-lp-03
+test description:verify the login page with valid username + invalid password 
+preconditions:1.user want to registered and active account
+2. login should be accesable
+test steps:1. enter valid username
+2. enter invalid pass
+3. click login
+test data:username:fb123@gmail.com
+pass:xxxxxxx
+expected result:user should not redirect to home page where it want to show the error msg as invalid credentials
+actual result: error msg
+status:- pass
+severity:-
+priority:-
+test comments:Functionality works as expected. 
+
+
+
+test case id: TC-lp-04
+test description:verify the login page with both empty cretentials 
+preconditions:1.user want to registered and active account
+2. login should be accesable
+test steps:1. enter empty username
+2. enter empty pass
+3. click login
+test data:username:
+pass:
+expected result:Appropriate validation message should be displayed for both mandatory fields,and the user remains on the login page
+actual result: error msg
+status:- pass
+severity:-
+priority:-
+test comments: The defect can be reproduced consistently using the documented steps. 
+
+
+
+test case id: TC-lp-05
+test description:verify the login page with  empty username + valid password 
+preconditions:1.user want to registered and active account
+2. login should be accessable
+test steps:1. enter empty username
+2. enter valid pass
+3. click login
+test data:username:
+pass:xxxxxxx
+expected result:username required validation message should be displayed and login should not be proceed
+actual result: error msg
+status:- pass
+severity:-
+priority:-
+test comments:Functionality works as expected. 
+
+
+
+test case id: TC-lp-06
+test description:verify the login page with  valid username + empty password
+preconditions:1.user want to registered and active account
+2. login should be accesable
+test steps:1. enter valid username
+2. enter empty pass
+3. click login
+test data:username:fb123@gmail.com
+pass:
+expected result:password required validation message should be displayed and login should not be procced  
+actual result: error msg
+status:- pass
+severity:-
+priority:-
+test comments: Functionality works as expected.
+
+
+
+test case id: TC-lp-07
+test description:verify the login page with invalis special character type of username 
+preconditions:1.user want to registered and active account
+2. login should be accesable 
+test steps:1. enter special char  username
+2. enter valid pass
+3. click login
+test data:username:fb123gmail.com
+pass:xxxxxxxxxx
+expected result:user should not redirect to home page where it want to show the error msg as invalid credentials 
+actual result: error msg
+status:- pass
+severity:-
+priority:-
+test comments: Functionality works as expected.
+
+
+
+test case id: TC-lp-08
+test description:verify the login page with invalid maximum length of pass 
+preconditions:1.user want to registered and active account
+2. login should be accesable and pass length should be min 8 characters
+test steps:1. enter valid username
+2. enter max length pass
+3. click login
+test data:username:fb123@gmail.com
+pass:xxxxxxxxxxxxxxxxxxxxxxxx
+expected result:system should reject it or display the appropriate validation message 
+actual result: error msg
+status:- pass
+severity:-
+priority:-
+test comments: Functionality works as expected.
+
+
+
+test case id: TC-lp-09
+test description: verify that the password is masked when entered
+preconditions:1.user want to registered and active account
+2. login should be accesable and pass length should be min 8 characters
+test steps:1. enter valid username
+2. enter password
+3. observe the password field
+4. click login
+test data:username:fb123@gmail.com
+pass:Test@123
+expected result:password character should be masked and should not be displayed as plain text 
+actual result:password is displayed as xxxxx
+status:- pass
+severity:-
+priority:-
+test comments: Functionality works as expected.
+
+
+
+test case id: TC-lp-10
+test description: verify that the forgot password option redirects the user to the passwory recovery page 
+preconditions:1.user want to registered and active account
+2. login should be accesable and pass length should be min 8 characters
+test steps:1. open login page 
+2.  click forgot password
+test data:username:fb123@gmail.com
+pass:(forgot password)
+expected result: user should be redirect to the password recovery page
+actual result: user is redirected to the password  recovery page 
+status:- pass
+severity:-
+priority:-
+test comments: Password recovery navigation works as expected.
+
+
+
+test case id: TC-lp-11
+test description: verify that Remember Me maintains the user login session according to the application's requirement
+preconditions:1.user want to registered and active account
+2. login should be accesable and pass length should be min 8 characters
+test steps:1. open login page 
+2. Enter valid username.
+3.Enter valid password.
+4.Select Remember Me.
+5.Click Login.
+6.Close and reopen the browser.
+7.Open the application.
+test data:username:fb123@gmail.com
+pass:(forgot password)
+expected result:user should be maintained according to remember me requirement 
+actual result:user credentials are filled  
+status:- pass
+severity:-
+priority:-
+test comments: Functionality works as expected.
+
+
+
+test case id: TC-lp-12
+test description: verify that username/email format accepts valid email format
+preconditions:1.user want to registered and active account
+2. login should be accesable and pass length should be min 8 characters
+test steps:1. open login page 
+2. Enter invalid email format(Invalid examples:
+fb123gmail.com
+fb123@
+@gmail.com)
+3.Enter valid password..
+5.Click Login.
+6.Close and reopen the browser.
+7.Open the application.
+test data:username:fb123@gmail.com
+pass:xxxxxxxxx
+expected result:system should display an appropriate validation message and should not proceed with login when the email format is invalid 
+actual result: Email format is correct/appropriate message should be displayed for wrong email format 
+status:- pass
+severity:-
+priority:-
+test comments: Functionality works as expected.
+
+
+
+
+test case id: TC-lp-13
+test description: verify that password must contain atleast 8 characters
+preconditions:1.user want to registered and active account
+2. login should be accesable and pass length should be min 8 characters
+test steps:1. open login page 
+2. Enter valid username
+3.Enter valid password.
+5.Click Login.
+test data:username:fb123@gmail.com
+pass:Test@123
+expected result:system should accept the password if all other login requirements are valid.
+actual result:password is correct/appropriate message should be displayed for wrong password format 
+
+status:- pass
+severity:-
+priority:-
+test comments: Functionality works as expected.
+
+
+test case id: TC-lp-14
+test description: verify that password exceeding max length
+preconditions:1.user want to registered and active account
+2. login should be accesable 
+test steps:1. open login page 
+2. Enter valid username
+3.Enter valid password.
+5.Click Login.
+test data:username:fb123@gmail.com
+pass:Test@12323444444444444444444
+expected result:system should reject the input or display an appropriate validation message, according to the requirement.
+actual result:password is correct/appropriate message should be displayed for wrong password format 
+
+status:- pass
+severity:-
+priority:-
+test comments: Functionality works as expected.
+
+
+
+test case id: TC-lp-15
+test description: verify that APPLICATION BEHAVIOUR AFTER multiple unsuccessful login attempts
+preconditions:1.user want to registered and active account
+2. login should be accesable 
+test steps:1. open login page 
+2. Enter valid username
+3.Enter invalid password.
+5.Click Login.
+test data:username:fb123@gmail.com
+pass:Test@12323444444444444444444
+expected result:system should reject the input or display an appropriate validation message, according to the requirement.
+actual result:password is correct/appropriate message should be displayed for wrong password format 
+
+status:- pass
+severity:-
+priority:-
+test comments: Functionality works as expected.
+
+
+
