@@ -77,37 +77,36 @@ Test Comments: Functionality works as expected.
 ---
 
 ### TC-SB-04 — Search Using Only Spaces
+Test Description:** Verify that the search field does not accept only spaces as a valid search.
 
-**Test Description:** Verify that the search field does not accept only spaces as a valid search.
+Precondition: Homepage is accessible and the search box is visible.
 
-**Precondition:** Homepage is accessible and the search box is visible.
-
-**Test Steps:**
+Test Steps:
 
 1. Open the homepage.
 2. Enter only spaces in the search box.
 3. Click the Search icon.
 
-**Test Data:** `     `
+Test Data:`     `
 
-**Expected Result:** System should reject the spaces-only input and should not perform an invalid search.
+Expected Result: System should reject the spaces-only input and should not perform an invalid search.
 
-**Actual Result:** Spaces-only input is rejected and an appropriate message is displayed.
+Actual Result: Spaces-only input is rejected and an appropriate message is displayed.
 
-**Status:** PASS
-**Severity:** N/A
-**Priority:** N/A
-**Test Comments:** Functionality works as expected.
+Status: PASS
+Severity: N/A
+Priority: N/A
+Test Comments: Functionality works as expected.
 
 ---
 
 ### TC-SB-05 — Case-Insensitive Search
 
-**Test Description:** Verify that product search is case-insensitive.
+Test Description: Verify that product search is case-insensitive.
 
-**Precondition:** Homepage is accessible and the search box is visible.
+Precondition: Homepage is accessible and the search box is visible.
 
-**Test Steps:**
+Test Steps:
 
 1. Open the homepage.
 2. Enter the product name using uppercase letters.
@@ -115,16 +114,16 @@ Test Comments: Functionality works as expected.
 4. Repeat the search using lowercase letters.
 5. Compare the results.
 
-**Test Data:** `SPEAKER` / `speaker`
+Test Data: `SPEAKER` / `speaker`
 
-**Expected Result:** The same relevant products should be displayed for both uppercase and lowercase searches.
+Expected Result:The same relevant products should be displayed for both uppercase and lowercase searches.
 
-**Actual Result:** The same relevant products are displayed.
+Actual Result:The same relevant products are displayed.
 
-**Status:** PASS
-**Severity:** N/A
-**Priority:** N/A
-**Test Comments:** Functionality works as expected.
+Status: PASS
+Severity: N/A
+Priority: N/A
+Test Comments: Functionality works as expected.
 
 ---
 
