@@ -1,0 +1,213 @@
+Tesrt Case for Vehicle Search & Filter
+
+project title:Fleet vehicle search and filter
+tester name: Dora
+test case id: TC-FS-01
+test description:verify that the search of valid vehicle id displays the respective vechile
+preconditions:1.user want to registered and active account
+2. search page should be accessible
+3. Vehicle should be already registered and saved in the application
+test steps:1. open search  page
+2. enter valid vehicle ID
+3. click Search
+test data:vehicle id:VEH128
+expected result:The respective searched vehicle should be display with correct details
+actual result:the searched vehicle displays on the screen 
+status:- pass
+
+severity:--
+priority:--
+test comments:Functionality works as expected.
+
+
+test case id: TC-FS-02
+test description:verify that the search of valid vehicle number displays the respective vechile
+preconditions:1.user want to registered and active account
+2. search page should be accessible
+3. Vehicle should be already registered and saved in the application
+test steps:1. open search  page
+2. enter valid vehicle number
+3. click Search
+test data:vehicle number : TN47AG2365
+expected result:The respective searched vehicle should be display with correct details
+actual result:the searched vehicle displays on the screen 
+status:- pass
+
+severity:--
+priority:--
+test comments:Functionality works as expected.
+
+
+test case id: TC-FS-03
+test description:verify that the search of non-existing vehicle id displays an error message
+preconditions:1.user want to registered and active account
+2. search page should be accessible
+3. Vehicle should be already registered and saved in the application
+test steps:1. open search  page
+2. enter non-existing vehicle id
+3. click Search
+test data:vehicle id : VEH127
+expected result:The  searched vehicle should not be display and appropriate validation message should be displayed
+actual result:No matching vehicle was found and an appropriate validation message was displayed
+status:- pass
+
+severity:--
+priority:--
+test comments:Functionality works as expected.
+
+
+test case id: TC-FS-04
+test description:verify that the search of non-existing vehicle number displays an error message
+preconditions:1.user want to registered and active account
+2. search page should be accessible
+3. Vehicle should be already registered and saved in the application
+test steps:1. open search  page
+2. enter non-existing vehicle number
+3. click Search
+test data:vehicle number :TN99XX9999
+expected result:The  searched vehicle should not be display and appropriate validation message should be displayed
+actual result:No matching vehicle was found and an appropriate validation message was displayed.
+status:- pass
+
+severity:--
+priority:--
+test comments:Functionality works as expected.
+
+
+test case id: TC-FS-05
+test description:verify that the empty search should display an appropriate error message
+preconditions:1.user want to registered and active account
+2. search page should be accessible
+3. Vehicle should be already registered and saved in the application
+test steps:1. open search  page
+2. leave search box as empty
+3. click Search
+test data:
+expected result:system should handle the empty search according to the requirement and should not perform an invalid product search.
+
+actual result:System handles the empty search as expected.
+status:- pass
+
+severity:--
+priority:--
+test comments:Functionality works as expected.
+
+
+test case id: TC-FS-06
+test description:Verify that vehicle search is case-insensitive.
+preconditions:1.user want to registered and active account
+2. search page should be accessible
+3. Vehicle should be already registered and saved in the application
+test steps:1. open search  page
+2. enter the vehicle num/id using uppercase
+3. click Search
+4. enter the vehicle num/id using lowercase
+5. click Search
+test data:VEH128/veh128
+expected result:Verify that vehicle search is case-insensitive.
+actual result:l Result:The same relevant vehicle are displayed for both searches
+
+status:- pass
+
+severity:--
+priority:--
+test comments:Functionality works as expected.
+
+
+
+test case id: TC-FS-07
+test description:verify that the vehicles can be Filtered by Vehicle Status
+preconditions:1.user want to registered and active account
+2. search page should be accessible
+3. Vehicle should be already registered and saved in the application
+test steps:1. Open the Vehicle Search page.
+2.Select Status = Available from the Status filter.
+3.Apply the filter.
+test data: Status = Available
+expected result:Only vehicles with status "Available" should be displayed.
+actual result:Only vehicles with status "Available" are displayed.
+status:- pass
+
+severity:--
+priority:--
+test comments:Functionality works as expected.
+
+
+test case id: TC-FS-08
+test description:verify that the vehicle Filtered by Vehicle type
+preconditions:1.user want to registered and active account
+2. search page should be accessible
+3. Vehicle should be already registered and saved in the application
+test steps:1. open the vehicle search  page
+2. search by vehicle type = car
+3. apply the filter
+test data: vehicle type:car
+expected result: Only vehicles of type "Car" should be displayed.
+actual result:Only vehicles of type "Car" are displayed.
+status:- pass
+
+severity:--
+priority:--
+test comments:Functionality works as expected.
+
+
+
+test case id: TC-FS-0
+test description:verify that the Vehicle search and status filter work together
+preconditions:1.user want to registered and active account
+2. search page should be accessible
+3. Vehicle should be already registered and saved in the application
+test steps:1. open vehicle search  page
+2. Enter VEH in the search field.  
+3. search vehicle status= Available
+4.Apply the search/filter.
+test data: search:VEH
+Status: Available
+expected result:Only vehicles matching both the search value "VEH" and status "Available" should be displayed.
+actual result:Only vehicles matching both conditions are displayed.
+status:- pass
+
+severity:--
+priority:--
+test comments:Functionality works as expected
+
+
+test case id: TC-FS-10
+test description:verify the behaviour of the search results when the search input is cleared
+preconditions:1.user want to registered and active account
+2. search page should be accessable
+3. Vehicle should be already registered and saved in the application
+4. a vehicle search has already been performed
+test steps:1. open search  page
+2. search by vehicle number/id  
+3. verify that the search results are displayed
+4.clear the search text
+test data: vehicle number:TN47AG2365
+
+expected result:d Result: Search results should be cleared and the application should return to the behavior defined for an empty search field, such as displaying the default vehicle list.
+actual result: Search results are cleared and the application behaves as expected
+status:- pass
+
+severity:--
+priority:--
+test comments:Functionality works as expected
+
+
+
+
+test case id: TC-FS-11
+test description:verify that non- admin user cannot access vehicle search functionality
+preconditions:1.A non-admin user account is available and active..
+test steps:1.log in as normal/non-admin user
+2.open fleet management
+3.check whether vehicle search is accessible 
+test data: vehicle number:TN47AG2365
+
+expected Result: Non-admin user should not be allowed to access Vehicle Search functionality and should receive an appropriate access-denied message or restriction.
+actual result:Non-admin user was denied access to Vehicle Search and an access-denied message was displayed.
+status:- pass
+
+severity:--
+priority:--
+test comments:Functionality works as expected
+
