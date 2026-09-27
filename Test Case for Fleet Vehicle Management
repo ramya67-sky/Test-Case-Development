@@ -1,0 +1,274 @@
+test case for fleet management
+
+ 
+project title:fleet management(vehicle registration)
+tester name:Dora
+test case id: TC-FL-01
+test description: verify valid vehicle registeration
+preconditions:1.admin user logged into the system and has a permission to register vechile
+test steps:1.open vehicle registration page
+2.click add vehicle
+3.enter valid vehicle id
+4.enter valid vehicle number
+5.select valid vehicle type
+6.select valid model
+7.select valid status
+8.click save
+test data: VEH128
+           TN47AG2365
+           Car
+           Honda
+           Available
+expected result:The vehicle should be successfully registered and saved in the system
+actual result:the vehicle was successfully registered and saved in the system
+status:pass
+
+severity: N/A
+priority:N/A
+test comments: functionality works as expected
+
+
+
+test case id: TC-FL-02
+test description: verify that vehicle cannot be registered when when vehicle id is empty
+ 
+preconditions:1.admin user logged into the system and has a permission to register vechile
+test steps:1.open vehicle registration page
+2.click add vehicle
+3.empty vehicle id
+4.enter valid vehicle number
+5.select valid vehicle type
+6.select valid model
+7.select valid status
+8.click save
+test data: vehicle id:
+           TN 47 AG 2365
+           Car
+           Honda
+           Available
+expected result:System should display a validation message for vecchile id and should not save the vehicle
+actual result:the vehicle was not saved and the required-field validation was displayed
+status:pass
+
+severity:N/A
+priority:N/A
+test comments: functionality works as expected
+
+test case id: TC-FL-03
+test description: verify that vehicle cannot be registered when vehicle number is empty
+
+preconditions:1.admin user logged into the system and has a permission to register vechile
+test steps:1.open vehicle registration page
+2.click add vehicle
+3.enter vehicle id
+4.empty vehicle number
+5.select valid vehicle type
+6.select valid model
+7.select valid status
+8.click save
+test data: vehicle id:VEH128
+           vehicle  num:
+           Car
+           Honda
+           Available
+expected result: System should display a validation message for Vehicle Number and should not save the vehicle.
+actual result:the vehicle was not successfully registered 
+status:pass
+
+severity:N/A
+priority:N/A
+test comments: functionality works as expected
+
+
+test case id: TC-FL-04
+test description: verify that vehicle cannot be registered when vehicle type is not selected
+preconditions:1.admin user logged into the system and has a permission to register vechile
+test steps:1.open vehicle registration page
+2.click add vehicle
+3.enter vehicle id
+4.enter valid vehicle number
+5. vehicle type is not selected
+6.select valid model
+7.select valid status
+8.click save
+test data: vehicle id:VEH128@
+           vehicle  num:TN 47 AG 2365
+           vech type:
+           Honda
+           Available
+expected result: System should display a validation message for Vehicle Type and should not save the vehicle.
+actual result:the vehicle was not successfully registered 
+status:pass
+
+severity:N/A
+priority:N/A
+test comments: functionality works as expected
+
+
+test case id: TC-FL-05
+test description: verify that vehicle cannot be registered when  model is not selected
+ preconditions:1.admin user logged into the system and has a permission to register vechile
+test steps:1.open vehicle registration page
+2.click add vehicle
+3.enter vehicle id
+4.enter valid vehicle number
+5.enter valid vehicle type
+6.empty model
+7.select valid status
+8.click save
+test data: vehicle id:VEH128@
+           vehicle  num:TN 47 AG 2365
+           vech type:Car
+           vehicle model:
+           Available
+expected result:System should display a validation message for Model and should not save the vehicle.
+actual result:the vehicle was not successfully registered 
+status:pass
+
+severity:N/A
+priority:N/A
+test comments: functionality works as expected
+
+
+test case id: TC-FL-06
+test description: verify default vehicle status is set to available
+preconditions:1.admin user logged into the system and has a permission to register vechile
+test steps:1.open vehicle registration page
+2.click add vehicle
+3.observe the status field
+test data: vehicle id:VEH128@
+           vehicle  num:TN 47 AG 2365
+           vech type:Car
+           vehicle model:Honda
+           default status:Available
+expected result:Status should automatically be set to Available.
+actual result:status is automatically set to Available.
+status:pass
+
+severity:N/A
+priority:N/A
+test comments: functionality works as expected
+
+
+
+test case id: TC-FL-07
+test description: verify that invalid vehicle number cannot be registered
+preconditions:1.admin user logged into the system and has a permission to register vechile
+test steps:1.open vehicle registration page
+2.click add vehicle
+3.enter vehicle id
+4.enter invalid vehicle number
+5.enter valid vehicle type
+6.enter valid  model
+7.select valid status
+8.click save
+test data: vehicle id:VEH128
+           vehicle  num:zz u7 AG 2365
+           vech type:Car
+           vehicle model:Honda
+           Available
+expected result:System should reject the invalid vehicle number format and display an appropriate validation message
+actual result:the vehicle was not successfully registered and displayed error message
+status:pass
+
+severity:N/A
+priority:N/A
+test comments: functionality works as expected
+
+
+
+test case id: TC-FL-08
+test description: verify that duplicate vehicle id cannot be registered
+preconditions:1.admin user logged into the system and has a permission to register vechile
+2.Vehicle VEH128 already exists in the system.
+test steps:1.open vehicle registration page
+2.click add vehicle
+3.enter existing vehicle id
+4.enter a different valid vehicle number
+5.enter valid vehicle type
+6.enter valid  model
+7.select valid status
+8.click save
+test data: vehicle id:VEH128
+           vehicle  num:TN 67 AG 2365
+           vech type:Car
+           vehicle model:Honda
+           Available
+expected result:System should reject the DUPLICATE vehicle id format and display an appropriate validation message.the vehicle should not be saved
+actual result: the vehicle was not registered and displayed error message 
+status:pass
+
+severity:N/A
+priority:N/A
+test comments: functionality works as expected
+
+
+
+test case id: TC-FL-09
+test description: verify that already registered vehicle cannot be registered again
+preconditions:1.admin user logged into the system and has a permission to register vechile
+2.Vehicle TN47AG2365 already registered
+test steps:1.open vehicle registration page
+2.click add vehicle
+3.enter the same existing vehicle id
+4.enter the same existing  vehicle number
+5.select the same vehicle type
+6.select same  model
+7.select  status
+8.click save
+test data: vehicle id:VEH128
+           vehicle  num:TN 47 AG 2365
+           vech type:Car
+           vehicle model: Honda
+           Available
+expected result:System should identify the DUPLICATE vehicle and prevent from duplicate registration
+actual result:the vehicle was not registered and displayed error message 
+status:pass
+
+severity:N/A
+priority:N/A
+test comments: functionality works as expected
+
+
+
+
+test case id: TC-FL-10
+test description: verify that an admin can access vehicle registration functionality
+preconditions:1.admin user logged into the system and has a permission to register vehicle
+
+test steps:1.log in as admin
+2.open fleet management
+3.open vehicle registration
+4.click add vehicle
+test data: -
+expected result:Admin was able to access the Vehicle Registration page and Add Vehicle option.
+actual  result:admin should be allowed to access and use vehicle registration 
+status:pass
+
+severity:N/A
+priority:N/A
+test comments: functionality works as expected
+
+
+
+test case id: TC-FL-11
+test description: verify that non- admin user cannot access vehicle registration functionality
+preconditions:1.A non-admin user account is available and active.
+test steps:1.log in as normal/non-admin user
+2.open fleet management
+3.check whether vehicle registration/add vehicle is accessible
+test data: vehicle id:VEH128
+           vehicle  num:TN 47 AG 2365
+           vech type:Car
+           vehicle model:Honda
+           Available
+expected result:non-admin user should not be allowed to access and use vehicle registration
+actual result:the non-admin user cannot registered the vehicle and displayed an access denied message
+status:pass
+
+severity:N/A
+priority:N/A
+test comments: functionality works as expected
+
+
+
