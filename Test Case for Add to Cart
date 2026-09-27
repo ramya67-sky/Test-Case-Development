@@ -1,0 +1,174 @@
+
+project title:E-commerce add to cart
+tester name: Dora
+Test Case ID:TC-AC-01
+Test Description:Verify that the default value is set to 1
+Precondition:Product page is accessible
+Test Steps	:1. Open the product page 
+2. select the wireless headphone
+ 3.. Observe the quantity
+Test Data:default quantity = 1
+Expected Result	:Quantity should displayed as 1 by default
+Actual Result:Quantity is displayed as 1
+Status:PASS
+Severity:N/A
+Priority:N/A
+Test Comments:Functionality works as expected
+
+
+
+Test Case ID:TC-AC-02
+Test Description:Verify that clicking + increases the product quantity by 1
+Precondition:Product page is accessible
+Test Steps	:1. Open the product page 
+2. verify default value as 1
+ 3. Click +
+ 4. Observe the quantity
+Test Data:Initial quantity = 1
+Expected Result	:Quantity should increase from 1 to 2
+Actual Result:Quantity increased from 1 to 2
+Status:PASS
+Severity:N/A
+Priority:N/A
+Test Comments:Functionality works as expected
+
+
+
+
+Test Case ID:TC-AC-03
+Test Description:Verify that clicking - decreases the product quantity by 1
+Precondition:Product page is accessible
+Test Steps	:1. Open the product page 
+2. Increase quantity from 1 to 2
+ 3. Click -
+ 4. Observe the quantity
+Test Data:Initial quantity = 2
+Expected Result	:Quantity should decrease from 2 to 1
+Actual Result:Quantity decreased from 2 to 1
+Status:PASS
+Severity:N/A
+Priority:N/A
+Test Comments:Functionality works as expected
+
+
+Test Case ID:TC-AC-04
+Test Description:Verify that the product quantity does not decrease below 1 
+Precondition:Product page is accessible
+Test Steps	:1. Open the product page 
+2. select wireless headphone
+ 3. Click -
+ 4. Observe the quantity
+Test Data:Initial quantity = 1
+Expected Result	:Quantity should not decrease from 1 to 0 or a negative value
+Actual Result:Quantity remained 1 after clicking -
+Status:PASS
+Severity:N/A
+Priority:N/A
+Test Comments:Functionality works as expected
+
+
+
+Test Case ID:TC-AC-05
+Test Description:Verify that the product is added to the cart 
+Precondition:Product page is accessible
+Test Steps	:1. Open the product page 
+2. select wireless headphone
+ 3. Click add to cart
+ 4.open the cart
+ 5. verify that the product is added
+Test Data: wireless headphone
+Expected Result	:the cart should add the product in the product page
+Actual Result:the product sucessfully added to the cart
+Status:PASS
+Severity:N/A
+Priority:N/A
+Test Comments:Functionality works as expected
+
+
+Test Case ID:TC-AC-06
+Test Description:Verify that the selected product name is correctly displayed in the cart 
+Precondition:Product page is accessible
+Test Steps:1. Open the product page 
+2. select wireless headphone
+ 3. Click add to cart
+ 4.open the cart
+ 5. observe the product name
+Test Data: wireless headphone
+Expected Result	:the cart should display the same product name selected on the product page
+Actual Result:the product displayed as same in the product page
+Status:PASS
+Severity:N/A
+Priority:N/A
+Test Comments:Functionality works as expected
+
+
+Test Case ID:TC-AC-07
+Test Description:Verify that the product quantity move from product page to cart  
+Precondition:Product page is accessible
+Test Steps:1. Open the product page 
+2. select wireless headphone
+ 3. Click add to cart
+ 4.open the cart
+ 5.observe the product quantity
+Test Data: quantity =1
+Expected Result	:the cart should display the same product quantity selected on the product page
+Actual Result:the product displayed same quantity in the product page
+Status:PASS
+Severity:N/A
+Priority:N/A
+Test Comments:Functionality works as expected
+
+
+
+Test Case ID:TC-AC-08
+Test Description:Verify that the product price move from product page to cart  
+Precondition:Product page is accessible
+Test Steps:1. Open the product page 
+2. select wireless headphone
+ 3. Click add to cart
+ 4.open the cart
+ 5.observe the product price in the cart
+Test Data: price = 1499
+Expected Result	:the cart should display 1499
+Actual Result:the product displayed 1499
+Status:PASS
+Severity:N/A
+Priority:N/A
+Test Comments:Functionality works as expected
+
+Test Case ID:TC-AC-09
+Test Description:Verify that the total product price calculation 
+Precondition:Product page is accessible
+Test Steps:1. Open the product page 
+2. select wireless headphone
+3.increase quantity from 1 to 3
+4.verify price is 799
+ 3. Click add to cart
+ 4.open the cart
+ 5.observe total price 
+Test Data: quantity = 3
+           price = 799
+Expected Result	:the cart should display the total product price selected as 2397
+Actual Result:the product displayed as 2397
+Status:PASS
+Severity:N/A
+Priority:N/A
+Test Comments:Functionality works as expected
+
+
+Test Case ID:TC-AC-10
+Test Description:Verify that the adding the same product should increase the existing quantity  
+Precondition:Product page is accessible
+Test Steps:1. Open the product page 
+2. select wireless headphone
+ 3. Click add to cart
+ 4. again click add to cart
+ 5.open the cart
+ 6.observe the product name
+Test Data: 1. add wireless headphone to the cart = 1
+           2. again click wireless headphone to the cart  = 2
+Expected Result	:The same product should appear as one cart item with quantity increased according to the application's requirement./Duplicate product should not be added.
+Actual Result:The same product should appear as one cart item with quantity increased according to the application's requirement./Duplicate product should not be added.
+Severity:N/A
+Priority:N/A
+Test Comments:Functionality works as expected
